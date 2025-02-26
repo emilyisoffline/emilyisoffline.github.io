@@ -4,14 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>a n x i e t y</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/resources/style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: black;
+            color: white;
+            overflow: hidden;
+        }
+
+        /* Splash Screen */
+        .splash {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .splash.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        /* Main Content */
+        .main {
+            opacity: 0;
+            display: none;
+            transition: opacity 1.5s ease-in-out;
+        }
+    </style>
 </head>
 <body>
-    <div class="main">
-        <h1>
-            anxiety
-        </h1>
-        <p>im the goat</p>
+
+    <!-- Click Anywhere Screen -->
+    <div class="splash" id="splash">
+        <p>Click anywhere to enter</p>
     </div>
+
+    <!-- Main Content -->
+    <div class="main center" id="mainContent">
+        <audio id="bgMusic" loop>
+            <source src="/resources/dying star up.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <img src="https://media.tenor.com/4TeRaRZURGgAAAAM/jane-remover-census-designated.gif" alt="jane remover">
+        <br>
+        <h1>anxiety</h1>
+        <p>emily emily emily emily emily emily emily emily emily</p>
+        <br>
+        <a href="mailto:emily@anxiety.rip">
+            <img src="https://web.archive.org/web/20040111162336/http://www.geocities.com:80/ruilendis/email.gif" alt="">
+        </a>
+    </div>
+
+    <script>
+        document.body.addEventListener("click", function() {
+            let splash = document.getElementById("splash");
+            let mainContent = document.getElementById("mainContent");
+            let bgMusic = document.getElementById("bgMusic");
+
+            splash.classList.add("fade-out"); // Fade out splash screen
+            setTimeout(() => {
+                splash.style.display = "none"; // Hide it completely
+                mainContent.style.display = "block";
+                setTimeout(() => {
+                    mainContent.style.opacity = "1"; // Fade in main content
+                }, 50);
+            }, 1500);
+
+            bgMusic.play(); // Start music
+        }, { once: true }); // Ensures it only runs once
+    </script>
+
 </body>
 </html>

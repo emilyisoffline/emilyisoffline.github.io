@@ -2,7 +2,6 @@ document.body.addEventListener("click", function() {
     let splash = document.getElementById("splash");
     let mainContent = document.getElementById("mainContent");
     let footer = document.querySelector("footer");
-    let bgMusic = document.getElementById("bgMusic");
 
     splash.classList.add("fade-out"); // Fade out splash screen
     setTimeout(() => {
@@ -14,27 +13,4 @@ document.body.addEventListener("click", function() {
         }, 50);
     }, 1500);
 
-    // Start music
-    bgMusic.play(); 
 }, { once: true }); // Ensures it only runs once
-
-// Play/Pause functionality
-// const playPauseBtn = document.getElementById("playPauseBtn");
-const bgMusic = document.getElementById("bgMusic");
-
-// playPauseBtn.addEventListener("click", function() {
-//     if (bgMusic.paused) {
-//         bgMusic.play();
-//         playPauseBtn.textContent = "mute"; // Change button text to Pause
-//     } else {
-//         bgMusic.pause();
-//         playPauseBtn.textContent = "unmute"; // Change button text to Play
-//     }
-// });
-
-// Volume control
-const volumeRange = document.getElementById("volumeRange");
-
-volumeRange.addEventListener("input", function() {
-    bgMusic.volume = volumeRange.value; // Update the volume based on input range
-});

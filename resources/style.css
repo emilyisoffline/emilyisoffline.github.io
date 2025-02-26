@@ -42,12 +42,19 @@ body {
     pointer-events: none;
 }
 
-/* Main Content */
 .main {
-    opacity: 0;
     display: none;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+    text-align: center;
+    width: 100%;
+    min-height: 100vh; /* Makes sure it's centered within the viewport */
     transition: opacity 1.5s ease-in-out;
+    opacity: 0;
 }
+
+
 
 /* Footer (Initially hidden behind splash) */
 footer {
@@ -91,4 +98,12 @@ button:hover, input[type="range"]:hover {
 
 input[type="range"] {
     width: 150px;
+}
+
+.intro {
+    /* border-color: white;
+    border-style: dashed; */
+    padding: 10px;
+    width: fit-content;
+    margin: auto; /* Ensures centering if flexbox doesn't apply */
 }

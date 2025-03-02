@@ -14,3 +14,8 @@ document.body.addEventListener("click", function() {
     }, 1500);
 
 }, { once: true }); // Ensures it only runs once
+
+const updatetimeElement = document.getElementById("updatetime");
+fetch("https://api.github.com/repos/emilyisoffline/emilyisoffline.github.io/branches/main")
+.then(data => data.json())
+.then(json => updatetimeElement.textContent = json['commit']['commit']['committer']['date'])

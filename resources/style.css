@@ -105,7 +105,7 @@ input[type="range"] {
     padding: 10px;
     width: fit-content;
     margin: auto; /* Ensures centering if flexbox doesn't apply */
-    max-width: 30%;
+    max-width: 80vw;
 }
 
 

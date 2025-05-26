@@ -1,5 +1,5 @@
 body {
-    background-color: #111;
+    background-color: black;
     color: #fff;
     font-family: 'Courier New', monospace;
     margin: 0;
@@ -10,7 +10,7 @@ table {
     margin: 50px auto;
     border-collapse: collapse;
     border: 2px solid #fff;
-    background-color: #222;
+    background-color: #121212;
 }
 td {
     border: 1px solid #888;
@@ -62,4 +62,12 @@ a:hover {
 }
 #pic {
     width: 10em;
+}
+
+#embed {
+    margin: 0;
+    width: 220px;
+    height: 100px;
+    border: none;
+    overflow: hidden;
 }

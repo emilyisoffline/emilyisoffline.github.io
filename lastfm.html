@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Last.fm Widget</title>
+        <style>
+          body {
+            background-color: black;
+            color: #fff;
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            padding: 0;
+          }
+          .track {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #121212;
+            border: 1px solid #888;
+            padding: 10px;
+          }
+          .track img {
+            width: 64px;
+            height: 64px;
+            object-fit: cover;
+            background: #333;
+            border: 1px solid #888;
+          }
+          .info {
+            flex: 1;
+          }
+          .title {
+            font-weight: bold;
+            color: #ff80c0;
+            margin: 0;
+            /* white-space: nowrap; */
+            /* overflow: hidden; */
+        }
+        .artist {
+            color: #87cefa;
+        }
+        .timestamp {
+            font-size: 0.8em;
+            color: #aaa;
+        }
+        </style>
+      </head>
+<body>
+  <div id="track-container">loading track :3</div>
+
+  <script>
+    const API_KEY = '94a7d1da6bc864d4e8d21905c8693442'; // i dont care you have it
+    const USERNAME = 'cabin';
+    const PLACEHOLDER_IMAGE = 'https://lastfm.freetls.fastly.net/i/u/64s/4128a6eb29f94943c9d206c08e625904.jpg';
+
+    async function fetchTrack() {
+      try {
+        const res = await fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${USERNAME}&api_key=${API_KEY}&format=json`);
+        const data = await res.json();
+        const track = data.recenttracks.track[0];
+
+        const artist = track.artist['#text'];
+        let title = track.name;
+        if (title.length > 40) {
+            title = title.slice(0, 25) + '...';
+        }
+        const image = track.image.find(img => img.size === 'medium')['#text'] || PLACEHOLDER_IMAGE;
+        const nowPlaying = track['@attr'] && track['@attr'].nowplaying === 'true';
+
+        let timestamp = 'Now playing';
+        if (!nowPlaying && track.date) {
+          const date = new Date(track.date.uts * 1000);
+          timestamp = `Scrobbled at ${date.toLocaleTimeString()}`;
+        }
+
+        document.getElementById('track-container').innerHTML = `
+        <div class="track">
+            <img src="${image || PLACEHOLDER_IMAGE}" alt="Album Art">
+            <div class="info">
+            <p class="title">${title}</p>
+            <div class="artist">${artist}</div>
+            <div class="timestamp">${timestamp}</div>
+            </div>
+        </div>
+        `;
+      } catch (e) {
+        document.getElementById('track-container').textContent = 'Error loading track data.';
+        console.error(e);
+      }
+    }
+
+    fetchTrack();
+    setInterval(fetchTrack, 5 * 60 * 1000);
+  </script>
+</body>
+</html>

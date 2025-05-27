@@ -56,18 +56,21 @@ a {
 a:hover {
     text-decoration: underline;
 }
-.scroll-text {
+.subheading {
     color: #aaa;
     font-size: 12px
 }
 #pic {
     width: 10em;
+    border-color: #ffffff;
+    border-width: 0.25rem;
+    border-style: solid;
 }
 
 #embed {
     margin: 0;
-    width: 220px;
-    height: 100px;
+    width: fit-content;
+    height: 92px;
     border: none;
     overflow: hidden;
 }

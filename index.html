@@ -1,59 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>anxiety.rip</title>
-    <link rel="stylesheet" href="./resources/style.css?modified=20012009"></head>
-<body>
-    <table>
-        <tr>
-            <td colspan="2" class="header">
-                anxiety . rip <img src="./resources/heartbeat.gif" alt="heartbeat">
-                <div class="scroll-text subheading">last updated: <span id="updatetime"></span> <br> <a href="mailto:emily@anxiety.rip">emily@anxiety.rip</a></div>
-            </td>
-        </tr>
-        <tr>
-            <td width="60%">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>anxiety.rip</title>
+        <link rel="stylesheet" href="./resources/style.css?modified=2001200559">
+    </head>
+    <body>
+        <div class="page-container">
+            <!-- Header -->
+            <div class="header">
+            anxiety . rip <img src="./resources/heartbeat.gif" alt="heartbeat">
+            <div class="scroll-text subheading">
+                last updated: <span id="updatetime"></span> <br>
+                <a href="mailto:emily@anxiety.rip">emily@anxiety.rip</a>
+            </div>
+            </div>
+
+            <!-- Main Content Area -->
+            <div class="main">
+            <!-- Left Column -->
+            <div class="left">
                 <div class="intro-text">
-                    <p>hi! my name is <span style="color: rgb(255, 192, 233);">emily</span> <span style="color: lightblue;">[she / her]</span> you've found my website....</p>
-                    <p>i'll post some stuff here eventually but before i do go check out all my cool shit !!</p>
-                    <br>
-                    <img src="./resources/cat.jpeg" alt="photo of a ginger cat" id="pic">
-                    <br>
-                    <span class="subheading">my cat maple :-)</span>
+                <p>hi! my name is <span style="color: rgb(255, 192, 233);">emily</span>
+                    <span style="color: lightblue;">[she / her]</span> you've found my website....</p>
+                <p>i'll post some stuff here eventually but before i do go check out all my cool shit !!</p>
+                <br>
+                <img src="./resources/cat.jpeg" alt="photo of a ginger cat" id="pic">
+                <br>
+                <span class="subheading">my cat maple :-)</span>
                 </div>
-            </td>
+            </div>
 
-            <td width="40%">
-                <table class="link-table">
-                    <thead>
-                        <tr><th>links xP</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr><td><a href="https://last.fm/user/cabin" target="_blank">last.fm</a></td></tr>
-                        <tr><td><a href="https://soundcloud.com/abduct" target="_blank">soundcloud</a></td></tr>
-                        <tr><td><a href="https://github.com/emilyisoffline" target="_blank">github</a></td></tr>
-                        <tr><td><a href="https://twitter.com/emilyisoffline" target="_blank">twitter</a></td></tr>
-                    </tbody>
-                </table>
+            <!-- Right Column -->
+            <div class="right">
+                <div class="link-table">
+                <h3>links xP</h3>
+                <ul>
+                    <li><a href="https://last.fm/user/cabin" target="_blank">last.fm</a></li>
+                    <li><a href="https://soundcloud.com/abduct" target="_blank">soundcloud</a></li>
+                    <li><a href="https://github.com/emilyisoffline" target="_blank">github</a></li>
+                    <li><a href="https://twitter.com/emilyisoffline" target="_blank">twitter</a></li>
+                </ul>
+                </div>
                 <iframe 
-                    src="./lastfm.html" 
-                    frameborder="0" 
-                    scrolling="no"
-                    id="embed"
+                src="./lastfm.html" 
+                frameborder="0" 
+                scrolling="no"
+                id="embed"
                 ></iframe>
-            </td>
-        </tr>
+            </div>
+            </div>
 
-        <tr>
-            <td colspan="2" class="footer">
-                © emilyisoffline 2025
-            </td>
-        </tr>
-    </table>
-
-    <script src="./resources/index.js?modified=20012009"></script>
-
-</body>
+            <!-- Footer -->
+            <div class="footer">
+            © emilyisoffline 2025
+            </div>
+        </div>
+        <script src="./resources/index.js?modified=20012009"></script>
+    </body>
 </html>

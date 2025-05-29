@@ -126,3 +126,22 @@ a:hover {
     color: #aaa;
     font-size: 12px;
 }
+
+#embed {
+    margin: 0;
+    width: fit-content;
+    height: 92px;
+    border: none;
+    overflow: hidden;
+}
+
+body {
+  background: url('https://www.transparenttextures.com/patterns/stardust.png');
+  animation: starScroll 30s linear infinite;
+  background-color: #000;
+}
+
+@keyframes starScroll {
+  from { background-position: 0 0; }
+  to { background-position: 0 1000px; }
+}

@@ -1,0 +1,147 @@
+/* General page styles */
+body {
+    background-color: black;
+    color: #fff;
+    font-family: 'Courier New', monospace;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main container layout */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    margin: 50px auto;
+    background-color: #121212;
+    border: 2px solid #fff;
+}
+
+/* Header */
+.header {
+    background-color: #333;
+    color: #ffb6c1;
+    font-size: 28px;
+    text-align: left;
+    padding: 20px;
+    border-bottom: 1px solid #888;
+}
+
+/* Scroll text inside header */
+.scroll-text {
+    font-size: 12px;
+    color: #aaa;
+}
+
+/* Main content area */
+.main {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    padding: 1rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/* Left column (intro and image) */
+.left {
+    flex: 3;
+    min-width: 250px;
+}
+
+.intro-text {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Cat image */
+#pic {
+    width: 10em;
+    border: 0.25rem solid #ffffff;
+}
+
+/* Right column (links + embed) */
+.right {
+    flex: 2;
+    min-width: 200px;
+}
+
+.link-table {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #888;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.link-table h3 {
+    background-color: #444;
+    color: #ff80c0;
+    font-size: 16px;
+    padding: 8px;
+    margin: 0 0 10px 0;
+}
+
+.link-table ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.link-table li {
+    margin-bottom: 0.5rem;
+}
+
+/* Embed */
+#embed {
+    margin: 0;
+    width: 100%;
+    height: 92px;
+    border: none;
+    overflow: hidden;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    background-color: #333;
+    color: #ccc;
+    font-size: 12px;
+    padding: 1rem;
+    border-top: 1px solid #888;
+}
+
+/* Links */
+a {
+    color: #87cefa;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Subheading */
+.subheading {
+    color: #aaa;
+    font-size: 12px;
+}
+
+#embed {
+    margin: 0;
+    width: fit-content;
+    height: 92px;
+    border: none;
+    overflow: hidden;
+}
+
+body {
+  background: url('https://www.transparenttextures.com/patterns/stardust.png');
+  animation: starScroll 30s linear infinite;
+  background-color: #000;
+}
+
+@keyframes starScroll {
+  from { background-position: 0 0; }
+  to { background-position: 0 1000px; }
+}

@@ -1,4 +1,4 @@
-fetch('http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=cabin&api_key=94a7d1da6bc864d4e8d21905c8693442&format=json')
+fetch('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=cabin&api_key=94a7d1da6bc864d4e8d21905c8693442&format=json')
   .then(response => {
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
